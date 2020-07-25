@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: ./
+      dockerfile: ./nginx/Dockerfile
+    volumes:
+      - "./logs/nginx:/tmp/logs"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "81:81"
